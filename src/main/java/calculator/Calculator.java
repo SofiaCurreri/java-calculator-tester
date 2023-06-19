@@ -3,36 +3,48 @@ package calculator;
 import java.util.Scanner;
 
 public class Calculator {
+     private float num1;
+     private float num2;
 
-    public static float add(float num1, float num2){
+    public Calculator(float num1, float num2) {
+        this.num1 = num1;
+        this.num2 = num2;
+    }
+
+    public float getNum1() {
+        return num1;
+    }
+
+    public void setNum1(float num1) {
+        this.num1 = num1;
+    }
+
+    public float getNum2() {
+        return num2;
+    }
+
+    public void setNum2(float num2) {
+        this.num2 = num2;
+    }
+
+    public float add(float num1, float num2){
         System.out.println("La somma è ");
         return num1 + num2;
     }
 
-    public static float subtract(float num1, float num2){
+    public float subtract(float num1, float num2){
         System.out.println("La sottrazione dà ");
         return num1 - num2;
     }
 
-    public static float divide(float num1, float num2){
+    public float divide(float num1, float num2){
         System.out.println("La divisione dà ");
         return num1 / num2;
     }
 
-    public static float multiply(float num1, float num2){
+    public float multiply(float num1, float num2){
         System.out.println("La moltiplicazione dà ");
         return num1 * num2;
     }
-    public static void main(String[] args) {
-        Scanner utente = new Scanner(System.in);
-        System.out.println("Inserisci il primo numero: ");
-        Float num1 = utente.nextFloat();
-        System.out.println("Inserisci il secondo numero: ");
-        Float num2 = utente.nextFloat();
 
-        System.out.println(add(num1, num2));
-        System.out.println(subtract(num1, num2));
-        System.out.println(divide(num1, num2));
-        System.out.println(multiply(num1, num2));
-    }
 }
