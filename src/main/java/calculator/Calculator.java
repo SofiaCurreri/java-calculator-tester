@@ -28,22 +28,18 @@ public class Calculator {
     }
 
     public float add(float num1, float num2){
-        System.out.println("La somma è ");
         return num1 + num2;
     }
 
     public float subtract(float num1, float num2){
-        System.out.println("La sottrazione dà ");
         return num1 - num2;
     }
 
     public float divide(float num1, float num2){
-        System.out.println("La divisione dà ");
         return num1 / num2;
     }
 
     public float multiply(float num1, float num2){
-        System.out.println("La moltiplicazione dà ");
         return num1 * num2;
     }
 
