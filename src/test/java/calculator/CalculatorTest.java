@@ -2,6 +2,7 @@ package calculator;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -12,9 +13,7 @@ class CalculatorTest {
 
     @BeforeEach
     void init() {
-        float num1 = 10.5f;
-        float num2 = 2.5f;
-        calculator = new Calculator(num1, num2);
+        calculator = new Calculator();
     }
 
     @Test
@@ -38,6 +37,7 @@ class CalculatorTest {
     }
 
     @Test
+    @DisplayName("Divisione normale")
     void divide() {
         float num1 = 10.5f;
         float num2 = 2.5f;
@@ -45,6 +45,12 @@ class CalculatorTest {
 
         float result = calculator.divide(num1, num2);
         Assertions.assertEquals(expectedResult, result);
+    }
+
+    @Test
+    @DisplayName("Divisione per 0")
+    void divideZero() {
+        assertThrows(IllegalArgumentException.class, () -> calculator.divide(10.5f, 0.0f));
     }
 
     @Test
